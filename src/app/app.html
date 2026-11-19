@@ -1,0 +1,16 @@
+<header>
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Головна</a>
+    <a routerLink="/city" routerLinkActive="active">Місто</a>
+    <a routerLink="/landmark" routerLinkActive="active">Пам'ятка</a>
+    <a routerLink="/attractions" routerLinkActive="active">Пам'ятки</a>
+    <a routerLink="/photos" routerLinkActive="active">Фото</a>
+    <a routerLink="/register" routerLinkActive="active">Реєстрація</a>
+    <span class="spacer"></span>
+    <span>{{ auth.isLoggedIn() ? 'Увійшли' : 'Гість' }}</span>
+  </nav>
+</header>
+
+<main>
+  <router-outlet />
+</main>
